@@ -10,7 +10,7 @@ import MobileScanner from "./MobileScanner";
 import UPIPaymentModal from "./UPIPaymentModal";
 import { ScanBarcode, Search, ChevronRight, ShoppingBag, ArrowLeft, Trash2, FilePlus, Package } from "lucide-react";
 import { toast } from "react-toastify";
-import "./Billing.css";
+import "./billing.css";
 
 function Billing({ onBack, quickMode = false }) {
   const retailerId = sessionStorage.getItem("retailerId");

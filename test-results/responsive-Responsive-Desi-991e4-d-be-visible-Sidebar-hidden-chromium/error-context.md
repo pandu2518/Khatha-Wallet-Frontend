@@ -1,0 +1,120 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - complementary [ref=e5]:
+      - navigation [ref=e7]:
+        - generic [ref=e8] [cursor=pointer]:
+          - img [ref=e9]
+          - generic [ref=e14]: Dashboard
+        - generic [ref=e15] [cursor=pointer]:
+          - img [ref=e16]
+          - generic [ref=e21]: Customers
+        - generic [ref=e22] [cursor=pointer]:
+          - img [ref=e23]
+          - generic [ref=e26]: Savings Scheme
+        - generic [ref=e27] [cursor=pointer]:
+          - img [ref=e28]
+          - generic [ref=e32]: Online Orders
+        - generic [ref=e33] [cursor=pointer]:
+          - img [ref=e34]
+          - generic [ref=e39]: Online Customers
+        - generic [ref=e40] [cursor=pointer]:
+          - img [ref=e41]
+          - generic [ref=e44]: Add Customer
+        - generic [ref=e45] [cursor=pointer]:
+          - img [ref=e46]
+          - generic [ref=e49]: Billing
+        - generic [ref=e50] [cursor=pointer]:
+          - img [ref=e51]
+          - generic [ref=e54]: Bills
+        - generic [ref=e55] [cursor=pointer]:
+          - img [ref=e56]
+          - generic [ref=e59]: Add Invoice
+        - generic [ref=e60] [cursor=pointer]:
+          - img [ref=e61]
+          - generic [ref=e65]: Products
+        - generic [ref=e66] [cursor=pointer]:
+          - img [ref=e67]
+          - generic [ref=e72]: Supplier
+        - generic [ref=e73] [cursor=pointer]:
+          - img [ref=e74]
+          - generic [ref=e77]: Profile
+      - button "Logout" [ref=e79]:
+        - img [ref=e80]
+        - text: Logout
+    - generic [ref=e83]:
+      - button "Home" [ref=e84] [cursor=pointer]:
+        - img [ref=e85]
+        - generic [ref=e88]: Home
+      - button "Billing" [ref=e89] [cursor=pointer]:
+        - img [ref=e90]
+        - generic [ref=e92]: Billing
+      - button "Orders" [ref=e93] [cursor=pointer]:
+        - img [ref=e94]
+        - generic [ref=e97]: Orders
+      - button "Customers" [ref=e98] [cursor=pointer]:
+        - img [ref=e99]
+        - generic [ref=e104]: Customers
+      - button "Savings" [ref=e105] [cursor=pointer]:
+        - img [ref=e106]
+        - generic [ref=e109]: Savings
+    - generic [ref=e110]:
+      - generic [ref=e111]:
+        - button [ref=e112] [cursor=pointer]:
+          - img [ref=e113]
+        - generic [ref=e114]: KhathaWallet
+      - button [ref=e116] [cursor=pointer]:
+        - img [ref=e117]
+    - main [ref=e120]:
+      - generic [ref=e121]:
+        - generic [ref=e122]:
+          - heading "Hey, Test 👋" [level=1] [ref=e123]
+          - paragraph [ref=e124]: Your shop overview for today
+        - generic [ref=e125]:
+          - generic [ref=e126]:
+            - generic [ref=e127] [cursor=pointer]:
+              - generic [ref=e128]:
+                - heading "Total Received" [level=3] [ref=e129]
+                - heading "₹ 0.00" [level=2] [ref=e130]
+              - img [ref=e132]
+            - generic [ref=e135] [cursor=pointer]:
+              - generic [ref=e136]:
+                - heading "Total Gave (Dues)" [level=3] [ref=e137]
+                - heading "₹ 0.00" [level=2] [ref=e138]
+              - img [ref=e140]
+          - generic [ref=e145]:
+            - generic [ref=e146] [cursor=pointer]:
+              - img [ref=e148]
+              - generic [ref=e150]: All Bills
+            - generic [ref=e151] [cursor=pointer]:
+              - img [ref=e153]
+              - generic [ref=e156]: Add Customer
+            - generic [ref=e157] [cursor=pointer]:
+              - img [ref=e159]
+              - generic [ref=e163]: Inventory
+            - generic [ref=e164] [cursor=pointer]:
+              - img [ref=e166]
+              - generic [ref=e169]: Orders
+          - generic [ref=e170]:
+            - generic [ref=e171] [cursor=pointer]:
+              - generic [ref=e172]:
+                - heading "Revenue Insights" [level=3] [ref=e173]:
+                  - img [ref=e174]
+                  - text: Revenue Insights
+                - img [ref=e176]
+              - paragraph [ref=e179]: Top Dues
+            - generic [ref=e180] [cursor=pointer]:
+              - generic [ref=e181]:
+                - heading "Inventory Status" [level=3] [ref=e182]:
+                  - img [ref=e183]
+                  - text: Inventory Status
+                - img [ref=e187]
+              - generic [ref=e189]:
+                - paragraph [ref=e190]: Low Stock
+                - generic [ref=e191]:
+                  - generic [ref=e192]: Product 1
+                  - generic [ref=e193]: left
+  - region "Notifications Alt+T"
+```

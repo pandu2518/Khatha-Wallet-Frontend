@@ -1,0 +1,79 @@
+/* ================= ADD CUSTOMER ================= */
+
+.add-customer-header h3 {
+  font-size: 20px;
+  font-weight: 800;
+  color: #1e293b;
+  margin: 0;
+}
+
+.add-customer-header .subtitle {
+  font-size: 14px;
+  color: #64748b;
+  margin-top: 4px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 11px;
+  font-weight: 800;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding-left: 4px;
+}
+
+.search-wrapper input {
+  background: rgba(255, 255, 255, 0.8) !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  border-radius: 12px !important;
+  font-size: 15px !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02) !important;
+}
+
+
+
+.search-wrapper input:focus {
+  background: white !important;
+  border-color: #4f46e5 !important;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.12) !important;
+  transform: translateY(-1px);
+}
+
+
+
+/* Specific Icons for Add Customer */
+.name-icon::before {
+  content: '👤';
+}
+
+.phone-icon::before {
+  content: '📞';
+}
+
+.email-icon::before {
+  content: '✉️';
+}
+
+.form-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sync-row {
+  display: flex;
+  justify-content: flex-start;
+}

@@ -1,0 +1,113 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - complementary [ref=e5]:
+      - generic [ref=e6]:
+        - img "Khatha Wallet" [ref=e8]
+        - navigation [ref=e9]:
+          - generic [ref=e10] [cursor=pointer]:
+            - img [ref=e11]
+            - generic [ref=e16]: Dashboard
+          - generic [ref=e17] [cursor=pointer]:
+            - img [ref=e18]
+            - generic [ref=e23]: Customers
+          - generic [ref=e24] [cursor=pointer]:
+            - img [ref=e25]
+            - generic [ref=e28]: Savings Scheme
+          - generic [ref=e29] [cursor=pointer]:
+            - img [ref=e30]
+            - generic [ref=e34]: Online Orders
+          - generic [ref=e35] [cursor=pointer]:
+            - img [ref=e36]
+            - generic [ref=e41]: Online Customers
+          - generic [ref=e42] [cursor=pointer]:
+            - img [ref=e43]
+            - generic [ref=e46]: Add Customer
+          - generic [ref=e47] [cursor=pointer]:
+            - img [ref=e48]
+            - generic [ref=e51]: Billing
+          - generic [ref=e52] [cursor=pointer]:
+            - img [ref=e53]
+            - generic [ref=e56]: Bills
+          - generic [ref=e57] [cursor=pointer]:
+            - img [ref=e58]
+            - generic [ref=e61]: Add Invoice
+          - generic [ref=e62] [cursor=pointer]:
+            - img [ref=e63]
+            - generic [ref=e67]: Products
+          - generic [ref=e68] [cursor=pointer]:
+            - img [ref=e69]
+            - generic [ref=e74]: Supplier
+          - generic [ref=e75] [cursor=pointer]:
+            - img [ref=e76]
+            - generic [ref=e79]: Profile
+      - button "Logout" [ref=e81]:
+        - img [ref=e82]
+        - text: Logout
+    - main [ref=e85]:
+      - generic [ref=e87]:
+        - generic [ref=e88]:
+          - generic [ref=e89]:
+            - img [ref=e91] [cursor=pointer]
+            - generic [ref=e93]:
+              - img [ref=e94]
+              - textbox "Search \"Milk\" or scan..." [ref=e97]
+            - button "Scan Barcode" [ref=e98]:
+              - img [ref=e99]
+            - button "1" [ref=e104] [cursor=pointer]:
+              - img [ref=e105]
+              - generic [ref=e108]: "1"
+          - generic [ref=e109]:
+            - combobox [ref=e110]:
+              - option "Select Customer (Optional - for Loyalty/Credit)"
+              - option "John Doe" [selected]
+            - generic [ref=e111]: "Type: Cash/UPI Sale • Loyalty Points: 0"
+          - generic [ref=e113]:
+            - generic [ref=e115]:
+              - img [ref=e116]
+              - generic [ref=e120]: ITEM
+            - generic [ref=e121]:
+              - generic "Item A" [ref=e122]
+              - generic [ref=e123]: 1 Unit
+            - generic [ref=e124]:
+              - generic [ref=e125]: ₹100
+              - generic [ref=e126]:
+                - button "−" [ref=e127] [cursor=pointer]
+                - spinbutton [ref=e128]: "1"
+                - button "+" [ref=e129] [cursor=pointer]
+        - generic [ref=e130]:
+          - generic [ref=e131]:
+            - heading "My Cart" [level=3] [ref=e132]
+            - generic [ref=e133]: 1 Items
+          - generic [ref=e135]:
+            - img [ref=e137]
+            - generic [ref=e141]:
+              - generic [ref=e142]:
+                - text: Item A
+                - generic [ref=e143]: ₹100 / pcs
+              - generic [ref=e144]:
+                - button "−" [ref=e145] [cursor=pointer]
+                - spinbutton [ref=e146]: "1"
+                - button "+" [ref=e147] [cursor=pointer]
+              - generic [ref=e148]: ₹100
+          - generic [ref=e149]:
+            - generic [ref=e150]:
+              - generic [ref=e151]: Item Total
+              - generic [ref=e152]: ₹100
+            - generic [ref=e153]:
+              - generic [ref=e154]: GST (5%)
+              - generic [ref=e155]: ₹5
+            - generic [ref=e156]:
+              - generic [ref=e157]: To Pay
+              - generic [ref=e158]: ₹105
+            - generic [ref=e159]:
+              - button "CASH" [ref=e160] [cursor=pointer]
+              - button "UPI" [ref=e161] [cursor=pointer]
+              - button "KHATHA" [ref=e162] [cursor=pointer]
+            - button "Place Order" [ref=e163] [cursor=pointer]:
+              - img [ref=e164]
+              - text: Place Order
+  - region "Notifications Alt+T"
+```

@@ -1,0 +1,114 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - complementary [ref=e5]:
+      - generic [ref=e6]:
+        - img "Khatha Wallet" [ref=e8]
+        - navigation [ref=e9]:
+          - generic [ref=e10] [cursor=pointer]:
+            - img [ref=e11]
+            - generic [ref=e16]: Dashboard
+          - generic [ref=e17] [cursor=pointer]:
+            - img [ref=e18]
+            - generic [ref=e23]: Customers
+          - generic [ref=e24] [cursor=pointer]:
+            - img [ref=e25]
+            - generic [ref=e28]: Savings Scheme
+          - generic [ref=e29] [cursor=pointer]:
+            - img [ref=e30]
+            - generic [ref=e34]: Online Orders
+          - generic [ref=e35] [cursor=pointer]:
+            - img [ref=e36]
+            - generic [ref=e41]: Online Customers
+          - generic [ref=e42] [cursor=pointer]:
+            - img [ref=e43]
+            - generic [ref=e46]: Add Customer
+          - generic [ref=e47] [cursor=pointer]:
+            - img [ref=e48]
+            - generic [ref=e51]: Billing
+          - generic [ref=e52] [cursor=pointer]:
+            - img [ref=e53]
+            - generic [ref=e56]: Bills
+          - generic [ref=e57] [cursor=pointer]:
+            - img [ref=e58]
+            - generic [ref=e61]: Add Invoice
+          - generic [ref=e62] [cursor=pointer]:
+            - img [ref=e63]
+            - generic [ref=e67]: Products
+          - generic [ref=e68] [cursor=pointer]:
+            - img [ref=e69]
+            - generic [ref=e74]: Supplier
+          - generic [ref=e75] [cursor=pointer]:
+            - img [ref=e76]
+            - generic [ref=e79]: Profile
+      - button "Logout" [ref=e81]:
+        - img [ref=e82]
+        - text: Logout
+    - main [ref=e85]:
+      - generic [ref=e87]:
+        - generic [ref=e88]:
+          - button "Back" [ref=e89] [cursor=pointer]:
+            - img [ref=e90]
+            - text: Back
+          - generic [ref=e92]:
+            - heading "Supplier List" [level=2] [ref=e93]:
+              - img [ref=e94]
+              - text: Supplier List
+            - paragraph [ref=e99]: 1 supplier registered
+          - button "Add Supplier" [ref=e100] [cursor=pointer]:
+            - img [ref=e101]
+            - text: Add Supplier
+        - textbox "🔍 Search by name, company, phone or products..." [ref=e102]
+        - generic [ref=e105]:
+          - generic [ref=e106]: G
+          - generic [ref=e107]:
+            - generic [ref=e108]:
+              - heading "Global Traders" [level=3] [ref=e109]
+              - generic [ref=e110]: GT Wholesale
+            - generic [ref=e111]: "To Pay: ₹500"
+            - generic [ref=e113]:
+              - img [ref=e114]
+              - text: "9876543210"
+            - button "Manage Credit" [ref=e116] [cursor=pointer]:
+              - img [ref=e117]
+              - text: Manage Credit
+          - generic [ref=e119]:
+            - button [ref=e120] [cursor=pointer]:
+              - img [ref=e121]
+            - button [ref=e124] [cursor=pointer]:
+              - img [ref=e125]
+        - generic [ref=e129]:
+          - generic [ref=e130]:
+            - generic [ref=e131]:
+              - heading "Global Traders" [level=3] [ref=e132]
+              - generic [ref=e133]: "Current Balance: You Owe ₹500"
+            - button [ref=e134] [cursor=pointer]:
+              - img [ref=e135]
+          - generic [ref=e138]:
+            - button "📉 You Received (Bill) Debt Increases" [ref=e139] [cursor=pointer]:
+              - generic [ref=e140]: 📉
+              - generic [ref=e141]: You Received (Bill)
+              - generic [ref=e142]: Debt Increases
+            - button "💸 You Gave (Payment) Debt Decreases" [ref=e143] [cursor=pointer]:
+              - generic [ref=e144]: 💸
+              - generic [ref=e145]: You Gave (Payment)
+              - generic [ref=e146]: Debt Decreases
+          - heading "Transaction History" [level=4] [ref=e147]
+          - generic [ref=e149]:
+            - generic [ref=e150]:
+              - generic [ref=e151]: PAYMENT MADE
+              - generic [ref=e152]: Invalid Date
+            - generic [ref=e153]: "- ₹"
+  - region "Notifications Alt+T":
+    - generic [ref=e154]:
+      - alert [ref=e155] [cursor=pointer]:
+        - img [ref=e157]
+        - text: Transaction recorded
+        - progressbar [ref=e161]
+      - alert [ref=e162] [cursor=pointer]:
+        - img [ref=e164]
+        - text: Transaction recorded
+        - progressbar [ref=e168]
+```

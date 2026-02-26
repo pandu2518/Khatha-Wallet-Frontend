@@ -1,0 +1,58 @@
+﻿
+Running 3 tests using 1 worker
+
+  Γ£ÿ  1 [chromium] ΓÇ║ tests\advanced_tests.spec.js:32:5 ΓÇ║ Advanced Testing & Edge Cases ΓÇ║ Data Integrity: Verify complex billing calculations (floating point) (1.3m)
+  Γ£ÿ  2 [chromium] ΓÇ║ tests\advanced_tests.spec.js:68:5 ΓÇ║ Advanced Testing & Edge Cases ΓÇ║ Resilience: Application handles offline state gracefully (20.9s)
+Landing Page Load Time: 603.9000000357628ms
+  Γ£ô  3 [chromium] ΓÇ║ tests\advanced_tests.spec.js:83:5 ΓÇ║ Advanced Testing & Edge Cases ΓÇ║ Performance: Landing page load benchmark (1.2s)
+
+
+  1) [chromium] ΓÇ║ tests\advanced_tests.spec.js:32:5 ΓÇ║ Advanced Testing & Edge Cases ΓÇ║ Data Integrity: Verify complex billing calculations (floating point) 
+
+    [31mTest timeout of 75000ms exceeded.[39m
+
+    Error: locator.click: Test timeout of 75000ms exceeded.
+    Call log:
+    [2m  - waiting for getByText('Billing Section').first()[22m
+
+
+      32 |     test('Data Integrity: Verify complex billing calculations (floating point)', async ({ page }) => {
+      33 |         await page.goto('/');
+    > 34 |         await page.getByText('Billing Section').first().click();
+         |                                                         ^
+      35 |
+      36 |         // 1. Add 3 of Item A
+      37 |         const cardA = page.locator('.modern-card', { hasText: 'Item A' });
+        at C:\Users\ASUS\OneDrive\Desktop\wallet\khatha book\khatha\tests\advanced_tests.spec.js:34:57
+
+    Error Context: test-results\advanced_tests-Advanced-Te-3200f-alculations-floating-point--chromium\error-context.md
+
+  2) [chromium] ΓÇ║ tests\advanced_tests.spec.js:68:5 ΓÇ║ Advanced Testing & Edge Cases ΓÇ║ Resilience: Application handles offline state gracefully 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: getByText('Welcome ≡ƒæï')
+    Expected: visible
+    Timeout: 20000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 20000ms[22m
+    [2m  - waiting for getByText('Welcome ≡ƒæï')[22m
+
+
+      68 |     test('Resilience: Application handles offline state gracefully', async ({ page, context }) => {
+      69 |         await page.goto('/');
+    > 70 |         await expect(page.getByText('Welcome ≡ƒæï')).toBeVisible();
+         |                                                    ^
+      71 |
+      72 |         // Simulate going offline
+      73 |         await context.setOffline(true);
+        at C:\Users\ASUS\OneDrive\Desktop\wallet\khatha book\khatha\tests\advanced_tests.spec.js:70:52
+
+    Error Context: test-results\advanced_tests-Advanced-Te-d3a4e-es-offline-state-gracefully-chromium\error-context.md
+
+  2 failed
+    [chromium] ΓÇ║ tests\advanced_tests.spec.js:32:5 ΓÇ║ Advanced Testing & Edge Cases ΓÇ║ Data Integrity: Verify complex billing calculations (floating point) 
+    [chromium] ΓÇ║ tests\advanced_tests.spec.js:68:5 ΓÇ║ Advanced Testing & Edge Cases ΓÇ║ Resilience: Application handles offline state gracefully 
+  1 passed (1.7m)

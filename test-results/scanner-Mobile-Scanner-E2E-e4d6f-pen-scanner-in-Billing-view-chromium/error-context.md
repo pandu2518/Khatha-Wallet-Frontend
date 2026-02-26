@@ -1,0 +1,95 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - complementary [ref=e5]:
+      - generic [ref=e6]:
+        - img "Khatha Wallet" [ref=e8]
+        - navigation [ref=e9]:
+          - generic [ref=e10] [cursor=pointer]:
+            - img [ref=e11]
+            - generic [ref=e16]: Dashboard
+          - generic [ref=e17] [cursor=pointer]:
+            - img [ref=e18]
+            - generic [ref=e23]: Customers
+          - generic [ref=e24] [cursor=pointer]:
+            - img [ref=e25]
+            - generic [ref=e28]: Savings Scheme
+          - generic [ref=e29] [cursor=pointer]:
+            - img [ref=e30]
+            - generic [ref=e34]: Online Orders
+          - generic [ref=e35] [cursor=pointer]:
+            - img [ref=e36]
+            - generic [ref=e41]: Online Customers
+          - generic [ref=e42] [cursor=pointer]:
+            - img [ref=e43]
+            - generic [ref=e46]: Add Customer
+          - generic [ref=e47] [cursor=pointer]:
+            - img [ref=e48]
+            - generic [ref=e51]: Billing
+          - generic [ref=e52] [cursor=pointer]:
+            - img [ref=e53]
+            - generic [ref=e56]: Bills
+          - generic [ref=e57] [cursor=pointer]:
+            - img [ref=e58]
+            - generic [ref=e61]: Add Invoice
+          - generic [ref=e62] [cursor=pointer]:
+            - img [ref=e63]
+            - generic [ref=e67]: Products
+          - generic [ref=e68] [cursor=pointer]:
+            - img [ref=e69]
+            - generic [ref=e74]: Supplier
+          - generic [ref=e75] [cursor=pointer]:
+            - img [ref=e76]
+            - generic [ref=e79]: Profile
+      - button "Logout" [ref=e81]:
+        - img [ref=e82]
+        - text: Logout
+    - main [ref=e85]:
+      - generic [ref=e87]:
+        - generic [ref=e88]:
+          - generic [ref=e89] [cursor=pointer]:
+            - generic [ref=e90]:
+              - heading "Total Received" [level=3] [ref=e91]
+              - heading "₹ 0.00" [level=2] [ref=e92]
+            - img [ref=e94]
+          - generic [ref=e97] [cursor=pointer]:
+            - generic [ref=e98]:
+              - heading "Total Gave (Dues)" [level=3] [ref=e99]
+              - heading "₹ 0.00" [level=2] [ref=e100]
+            - img [ref=e102]
+        - generic [ref=e107]:
+          - generic [ref=e108] [cursor=pointer]:
+            - img [ref=e110]
+            - generic [ref=e112]: All Bills
+          - generic [ref=e113] [cursor=pointer]:
+            - img [ref=e115]
+            - generic [ref=e118]: Add Customer
+          - generic [ref=e119] [cursor=pointer]:
+            - img [ref=e121]
+            - generic [ref=e125]: Inventory
+          - generic [ref=e126] [cursor=pointer]:
+            - img [ref=e128]
+            - generic [ref=e131]: Orders
+        - generic [ref=e132]:
+          - generic [ref=e133] [cursor=pointer]:
+            - generic [ref=e134]:
+              - heading "Revenue Insights" [level=3] [ref=e135]:
+                - img [ref=e136]
+                - text: Revenue Insights
+              - img [ref=e138]
+            - generic [ref=e140]:
+              - paragraph [ref=e141]: Comparison of received payments vs. pending dues.
+              - application [ref=e144]
+          - generic [ref=e145] [cursor=pointer]:
+            - generic [ref=e146]:
+              - heading "Inventory Status" [level=3] [ref=e147]:
+                - img [ref=e148]
+                - text: Inventory Status
+              - img [ref=e152]
+            - generic [ref=e154]:
+              - paragraph [ref=e155]: Monitor stock levels for your top moving products.
+              - application [ref=e158]
+  - region "Notifications Alt+T"
+```

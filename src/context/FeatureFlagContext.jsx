@@ -11,7 +11,7 @@ export const FeatureFlagProvider = ({ children }) => {
         const fetchFlags = async () => {
             try {
                 // Fetch flags from the new backend endpoint
-                const response = await axiosClient.get('/api/config/flags');
+                const response = await axiosClient.get('/config/flags');
                 setFlags(response.data);
                 console.log('Feature Flags Loaded:', response.data);
             } catch (error) {

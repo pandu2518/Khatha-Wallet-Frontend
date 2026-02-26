@@ -6,18 +6,15 @@ import MobileScanner from "./MobileScanner";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./i18n/i18n";   // ✅ CORRECT
-import { FeatureFlagProvider } from "./context/FeatureFlagContext";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <FeatureFlagProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/*" element={<App />} />
-          <Route path="/scan" element={<MobileScanner />} />
-        </Routes>
-      </BrowserRouter>
-    </FeatureFlagProvider>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/*" element={<App />} />
+        <Route path="/scan" element={<MobileScanner />} />
+      </Routes>
+    </BrowserRouter>
 
     <ToastContainer
       position="top-center"

@@ -4,7 +4,8 @@ import { X, Search, Check } from "lucide-react";
 function SelectContactModal({ contacts, onClose, onSelect }) {
     const [searchTerm, setSearchTerm] = useState("");
 
-    const filteredContacts = contacts.filter((c) =>
+    const safeContacts = Array.isArray(contacts) ? contacts : [];
+    const filteredContacts = safeContacts.filter((c) =>
         (c.name || "").toLowerCase().includes(searchTerm.toLowerCase()) ||
         (c.email || "").toLowerCase().includes(searchTerm.toLowerCase())
     );

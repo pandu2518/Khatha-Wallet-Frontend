@@ -40,7 +40,7 @@ function SupplierPage({ onBack }) {
         try {
             setLoading(true);
             const res = await getSuppliers();
-            setSuppliers(res.data || []);
+            setSuppliers(Array.isArray(res.data) ? res.data : []);
         } catch (e) {
             console.error("Failed to load suppliers", e);
         } finally {
@@ -131,7 +131,8 @@ function SupplierPage({ onBack }) {
         }
     };
 
-    const filtered = suppliers.filter((s) =>
+    const safeSuppliers = Array.isArray(suppliers) ? suppliers : [];
+    const filtered = safeSuppliers.filter((s) =>
         [s.name, s.company, s.phone, s.productsSupplied]
             .join(" ")
             .toLowerCase()

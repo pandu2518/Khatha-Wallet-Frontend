@@ -6,7 +6,8 @@ import { createBill, uploadBillImage } from "./api/billApi"; // ✅ API Imports
 
 function SchemeDetails({ customer, bills = [], onBack, refreshBills }) {
     // Filter only SCHEME transactions
-    const schemeBills = bills.filter((b) => b.type === "SCHEME");
+    const safeBills = Array.isArray(bills) ? bills : [];
+    const schemeBills = safeBills.filter((b) => b.type === "SCHEME");
 
     // ✅ State for Payment Modal
     const [showPaymentModal, setShowPaymentModal] = useState(false);

@@ -49,12 +49,12 @@ function Billing({ onBack, quickMode = false }) {
   /* ================= LOAD DATA ================= */
   const loadCustomers = async () => {
     const res = await getCustomers();
-    setCustomers(res.data || []);
+    setCustomers(Array.isArray(res.data) ? res.data : []);
   };
 
   const loadProducts = async () => {
     const res = await getProducts(retailerId);
-    setProducts(res.data || []);
+    setProducts(Array.isArray(res.data) ? res.data : []);
   };
 
   const loadRetailerInfo = async () => {

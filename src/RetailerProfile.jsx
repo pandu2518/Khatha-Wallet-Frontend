@@ -54,10 +54,12 @@ function RetailerProfile({ onBack, onLogout }) {
         staffApi.getTodayAttendance(rId)
       ]);
 
-      setStaffList(staffRes.data || []);
+      const safeStaffList = Array.isArray(staffRes.data) ? staffRes.data : [];
+      setStaffList(safeStaffList);
 
       const attendance = {};
-      attendanceRes.data.forEach(rec => {
+      const safeAttendanceList = Array.isArray(attendanceRes.data) ? attendanceRes.data : [];
+      safeAttendanceList.forEach(rec => {
         attendance[rec.staffId] = rec;
       });
       setAttendanceMap(attendance);
@@ -129,7 +131,7 @@ function RetailerProfile({ onBack, onLogout }) {
       setHistoryLoading(true);
       const rId = sessionStorage.getItem("retailerId");
       const res = await staffApi.getMonthlyAttendance(staffId, month, year, rId);
-      setHistoryData(res.data || []);
+      setHistoryData(Array.isArray(res.data) ? res.data : []);
     } catch (err) {
       toast.error("Failed to load history");
     } finally {

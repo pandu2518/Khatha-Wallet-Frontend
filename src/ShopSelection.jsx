@@ -127,7 +127,8 @@ function ShopSelection({ accounts, onSelectShop, onBack, isModal = true, isRegis
         }
     };
 
-    const filteredShops = shops.filter(s => {
+    const safeShops = Array.isArray(shops) ? shops : [];
+    const filteredShops = safeShops.filter(s => {
         const name = (s.name || s.retailerName || "").toLowerCase();
         const shopName = (s.shopName || "").toLowerCase();
         const phone = (s.phone || s.retailerPhone || "");

@@ -142,7 +142,7 @@ function Dashboard() {
     try {
       // 1. Customers
       const resCustomers = await getCustomers();
-      const customerData = resCustomers.data || [];
+      const customerData = Array.isArray(resCustomers.data) ? resCustomers.data : [];
       setCustomers(customerData);
 
       // Sync selected customer
@@ -154,11 +154,13 @@ function Dashboard() {
       if (retailerId) {
         // 2. Products (For Mobile Top 2)
         const resProducts = await getProducts(retailerId);
-        setProducts(resProducts.data || []);
+        const productData = Array.isArray(resProducts.data) ? resProducts.data : [];
+        setProducts(productData);
 
         // 3. Online Orders (For Mobile Top 2)
         const resOrders = await axiosClient.get(`/orders/retailer/${retailerId}`);
-        setOrders(resOrders.data || []);
+        const orderData = Array.isArray(resOrders.data) ? resOrders.data : [];
+        setOrders(orderData);
       }
 
     } catch (error) {
@@ -175,7 +177,7 @@ function Dashboard() {
   /* ================= LOAD BILLS ================= */
   const loadBills = async (customerId) => {
     const res = await getBillsByCustomer(customerId);
-    setBills(res.data || []);
+    setBills(Array.isArray(res.data) ? res.data : []);
   };
 
   useEffect(() => {

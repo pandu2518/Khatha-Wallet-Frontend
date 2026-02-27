@@ -4,7 +4,7 @@ function SyncContactsModal({ onClose, onImport }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:8084/api";
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "https://khatha-wallet-backend-production.up.railway.app/api";
   const GOOGLE_CLIENT_ID = import.meta.env.VITE_GOOGLE_CLIENT_ID;
 
   /* ================= GOOGLE CONTACT SYNC ================= */

@@ -67,10 +67,11 @@ function CustomerMarketplace({ products: propProducts, cart, addToCart, removeFr
     }, [userLocation, isGlobal]);
 
     useEffect(() => {
+        const safeProducts = Array.isArray(products) ? products : [];
         if (selectedCategory === "ALL") {
-            setFilteredProducts(products);
+            setFilteredProducts(safeProducts);
         } else {
-            setFilteredProducts(products.filter(p => p.category === selectedCategory));
+            setFilteredProducts(safeProducts.filter(p => p.category === selectedCategory));
         }
     }, [selectedCategory, products]);
 
@@ -133,6 +134,8 @@ function CustomerMarketplace({ products: propProducts, cart, addToCart, removeFr
     const prevImage = () => setCurrentImageIndex((prev) => (prev - 1 + 3) % 3);
 
     if (loading) return <div className="loader">Loading Market...</div>;
+
+    const safeProducts = Array.isArray(products) ? products : [];
 
     return (
         <div className="customer-body">
@@ -328,7 +331,7 @@ function CustomerMarketplace({ products: propProducts, cart, addToCart, removeFr
                     </div>
 
                     {/* Quick Nav Section (Floating at bottom of backdrop) */}
-                    {products.filter(p => p.category === selectedProduct.category && p.barcode !== selectedProduct.barcode).length > 0 && (
+                    {safeProducts.filter(p => p.category === selectedProduct.category && p.barcode !== selectedProduct.barcode).length > 0 && (
                         <div className="modal-quick-nav-container" onClick={(e) => e.stopPropagation()}>
                             <div className="quick-nav-header" style={{ padding: '0 20px', marginBottom: '8px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                                 <span style={{ fontSize: '12px', fontWeight: '700', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
@@ -336,7 +339,7 @@ function CustomerMarketplace({ products: propProducts, cart, addToCart, removeFr
                                 </span>
                             </div>
                             <div className="quick-nav-scroll">
-                                {products
+                                {safeProducts
                                     .filter(p => p.category === selectedProduct.category && p.barcode !== selectedProduct.barcode)
                                     .slice(0, 15)
                                     .map((p) => (

@@ -18,12 +18,13 @@ function BillList({ onBack }) {
     }, []);
 
     useEffect(() => {
+        const safeBills = Array.isArray(bills) ? bills : [];
         if (!searchTerm) {
-            setFilteredBills(bills);
+            setFilteredBills(safeBills);
         } else {
             const lower = searchTerm.toLowerCase();
             setFilteredBills(
-                bills.filter(
+                safeBills.filter(
                     (b) =>
                         b.billNumber?.toLowerCase().includes(lower) ||
                         b.customer?.name?.toLowerCase().includes(lower) ||

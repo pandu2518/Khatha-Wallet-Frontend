@@ -11,7 +11,8 @@ function CustomerList({ customers = [], onBack, onSelectCustomer, title }) {
   const [emailInput, setEmailInput] = useState("");
 
   // ✅ SAFE FILTER (NO CRASH)
-  const filteredCustomers = customers.filter(
+  const safeCustomers = Array.isArray(customers) ? customers : [];
+  const filteredCustomers = safeCustomers.filter(
     (c) =>
       c &&
       typeof c.name === "string" &&
